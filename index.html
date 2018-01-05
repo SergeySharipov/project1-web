@@ -55,7 +55,7 @@
               <a class="nav-link" href="#" data-toggle="modal" data-target="#addOrderModal" onclick="loadOrderDetails()">Create order</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Add product</a>
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#addProductModal">Add product</a>
             </li>
           </ul>
         </nav>
@@ -188,6 +188,36 @@
                </div>
               </div>
             </div><!-- end modal -->
+
+            <!-- Modal popup for adding product -->
+            <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="productTitleLabel">Add new product</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="addProduct">
+                        <div class="form-group">
+                          <label for="productName">Product name</label>
+                          <input type="text" class="form-control" name="productName" aria-describedby="productName" placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                          <label for="price">Price ($CAD)</label>
+                          <input type="text" class="form-control" name="price" aria-describedby="price" placeholder="Enter price per unit">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- end modal -->
     
           </div><!-- /container-fluid -->
 
